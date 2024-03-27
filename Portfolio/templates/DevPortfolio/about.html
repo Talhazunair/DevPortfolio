@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="flex justify-center">
+    <div class="text-center">
+        <h2>Who am I</h2>
+        <h1 class="text-2xl font-bold">About My Resume</h1>
+    </div>
+</section>
+<section class="flex justify-center pt-10">
+  <div class="h-[35vh] bg-[#BAC3C0] w-[35vh] rounded-full overflow-hidden">
+      <img src="{% static 'Images/profile.png' %}" alt="" class="">
+  </div>
+</section>
+<section>
+    <div class="overflow-x-auto">
+        <table class="table">
+          <!-- head -->
+          <tbody>
+            <!-- row 1 -->
+            <tr>
+              <td>Full Name</td>
+              <td>Talha Zunair</td>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+              <td>D-O-B</td>
+              <td>10-Sep-2001</td>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+              <td>Education</td>
+              <td>BS Computer Science</td>
+            </tr>
+            <tr>
+                <td>University</td>
+                <td>Riphah International University</td>
+              </tr>
+              <tr>
+                <td>GPA</td>
+                <td>3.5/4.0</td>
+              </tr>
+              <tr>
+                <td>Specialization</td>
+                <td>Backend Developer</td>
+              </tr>
+              <tr>
+                <td>Nationality</td>
+                <td>Pakistan</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+</section>
+<section>
+    <div class="text-center">
+    <h1 class="text-2xl font-bold">Contact Me</h1>
+    </div>
+</section>
+<section class="flex justify-center">
+  <div>
+    <ul class="flex flex-row">
+      <li class="p-6">
+        <a href="mailto:talhazunair37@gmail.com" class="fa-brands fa-google text-2xl"></a>
+      </li>
+      <li class="p-6">
+        <a href="https://www.linkedin.com/in/talhazunair/" class="fa-brands fa-linkedin text-2xl"></a>
+      </li>
+      <li class="p-6">
+        <a href="https://www.instagram.com/talhazunair479/" class="fa-brands fa-instagram text-2xl"></a>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

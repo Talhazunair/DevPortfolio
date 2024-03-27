@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="p-5" id="contact-bg">
+    <div class="justify-center flex pt-5">
+        <h1 class="text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-bold">Contact Me</h1>
+    </div>
+    <div class="justify-center flex">
+        <div class=" bg-[#0e1116] p-7 rounded-2xl w-[47vh] shadow-xl card">
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <Label>First Name</Label>
+                        </td>
+                        <td>
+                            <label for="">Last Name</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                        </td>
+                        <td>
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Label>Your email</Label>
+                        </td>
+                        <td>
+                            <label for="">Phone Number</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                        </td>
+                        <td>
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="" >Your Message</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+                <textarea name="" id="" cols="51" rows="9" class="w-[40vh] h-[30vh] textarea textarea-success" ></textarea>        
+                <br>
+                <div class="pt-6">
+                    <div class="relative inline-flex  group h-5">
+                        <div
+                            class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                        </div>
+                        <a href="#" title="Get quote now"
+                            class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                            role="button">Send
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
