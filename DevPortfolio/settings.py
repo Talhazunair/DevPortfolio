@@ -44,13 +44,11 @@ INSTALLED_APPS = [
 TAILWIND_APP_NAME = 'theme'
 
 INTERNAL_IPS = [
-    # "127.0.0.1",
-    ['.vercel.app']
+    "127.0.0.1",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -135,7 +133,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# NPM_BIN_PATH = "C:\\Program Files\\nodejs\\npm.cmd"
+NPM_BIN_PATH = "C:\\Program Files\\nodejs\\npm.cmd"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
