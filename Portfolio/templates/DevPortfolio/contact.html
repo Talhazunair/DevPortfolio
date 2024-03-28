@@ -7,7 +7,9 @@
     </div>
     <div class="justify-center flex">
         <div class=" bg-[#0e1116] p-7 rounded-2xl w-[47vh] shadow-xl card">
-            <form action="">
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+
                 <table>
                     <tr>
                         <td>
@@ -19,10 +21,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs" name="firstname">
                         </td>
                         <td>
-                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs" name="lastname">
                         </td>
                     </tr>
                     <tr>
@@ -35,10 +37,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs" name="useremail">
                         </td>
                         <td>
-                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs">
+                            <input type="text" class="w-[20vh] h-9 rounded-md input input-bordered input-success w-full max-w-xs" name="useremail">
                         </td>
                     </tr>
                     <tr>
@@ -51,17 +53,12 @@
                         </td>
                     </tr>
                 </table>
-                <textarea name="" id="" cols="51" rows="9" class="w-[40vh] h-[30vh] textarea textarea-success" ></textarea>        
+                <textarea cols="51" rows="9" class="w-[40vh] h-[30vh] textarea textarea-success" name="message"></textarea>        
                 <br>
                 <div class="pt-6">
-                    <div class="relative inline-flex  group h-5">
-                        <div
-                            class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
-                        </div>
-                        <a href="#" title="Get quote now"
-                            class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                            role="button">Send
-                        </a>
+                        <button type="submit" class="bg-gray-900 h-10 w-24 rounded-lg">
+                            Submit
+                        </button>
                     </div>
                 </div>
             </form>

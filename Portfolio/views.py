@@ -1,4 +1,6 @@
 from django.shortcuts import render,get_object_or_404
+from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
 from .models import Projects
 # Create your views here.
 def index(request):
@@ -6,10 +8,24 @@ def index(request):
 
 def skill(request):
     return render(request,"DevPortfolio/skill.html")
-
 def contact(request):
-    return render(request,"DevPortfolio/contact.html")
+    if request.method == 'POST':
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('useremail')
+        phonenumber = request.POST.get('phonenumber')
+        message = request.POST.get('message')
 
+        send_mail(
+            f"New Contact Form Submission from {firstname} {lastname}",
+            message,
+            email,
+            ['talhazunair37@gmail.com'],
+            fail_silently=False
+        )
+        return HttpResponseRedirect('/')
+
+    return render(request, "DevPortfolio/contact.html")
 def about(request):
     return render(request,"DevPortfolio/about.html")
 
